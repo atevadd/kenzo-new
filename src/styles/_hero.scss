@@ -1,0 +1,49 @@
+// .hero {
+// 	.scroll-rails {
+// 		@apply br flex flex-row flex-nowrap items-center space-x-2;
+
+//     .big_moving_text{
+//       @apply br;
+//       max-width: none;
+//       white-space: nowrap;
+//       animation: text-slider 8s linear infinite;
+
+//     }
+
+// 	}
+// }
+
+// @keyframes text-slider {
+// 	0% {
+// 		transform: translate(0, 0);
+// 	}
+// 	100% {
+// 		transform: translate(-100%, 0);
+// 	}
+// }
+
+//   .scroll-container{
+//     .scroll-rails {
+//       @apply border-t border-neutral-700 flex flex-row flex-nowrap items-center;
+//       white-space: nowrap;
+  
+//       .big_moving_text{
+//         @apply  font-semibold text-neutral-700 font-fira text-[64px] italic br uppercase;
+//         max-width: none;
+//         white-space: nowrap;
+//         // animation: text-slider 8s linear infinite;
+  
+//       }
+  
+//     }
+//   }
+
+
+// @keyframes text-slider {
+//   0% {
+//     transform: translate3d(0, 0, 0);
+//   }
+//   100% {
+//     transform: translate3d(-50%, 0, 0);
+//   }
+// }

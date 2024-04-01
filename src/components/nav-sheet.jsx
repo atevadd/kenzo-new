@@ -27,7 +27,11 @@ export function NavSheet()
 
                         <div onMouseLeave={() => { setSelectedIndicator(router.pathname) }} className={"nav"}>
                               <div className={"header"}>
-                                    <p>Navigation</p>
+                                    <div className="logo">
+                                          <img className="nav-logo" src="/logo2-crop.png" width={180} alt="logo" />
+                                    </div>
+
+
                               </div>
                               {
                                     navs.map((data, index) =>

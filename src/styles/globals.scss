@@ -3,24 +3,65 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "../../public/font/fonts";
 @import "nav-sheet.scss";
+@import "services";
+@import "hero";
+
+body {
+	// font-family: 'jb-mono';
+	transition: all 0.4s ease-in;
+overflow-x: hidden;
+@apply text-neutral-600;
+scroll-snap-type: y mandatory;
+}
+
+section {
+	scroll-snap-align: start;
+    }
 
 .br {
 	border: 1px solid red;
+}
+
+.bg {
+	border: 1px solid green;
 }
 
 .full {
 	@apply w-full h-full;
 }
 
-.centered{
+.centered {
 	@apply flex justify-center items-center;
-
 }
 
-.hero-image img {
-	/* backdrop-filter: ; */
+// .hero-image img {
+// 	/* backdrop-filter: ; */
+// 	filter: grayscale(1);
+// }
+
+.cursor{
+	background-color: transparent;
+	mix-blend-mode: darken;
+	transform-origin: 0;
+	z-index: 99;
+}
+
+.image_box {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: all 0.4s ease-in;
+	transform: scale(1);
+
+	// background-attachment: ;
 	filter: grayscale(1);
+	&:hover {
+		filter: grayscale(0);
+		transform: scale(1.04);
+		transition: all 0.4s ease-in;
+	}
 }
 
 .nav-logo {
@@ -32,7 +73,7 @@
 	&::after {
 		content: "";
 		height: 4px;
-		background-color: #000;
+		background-color: #a3a3a3;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -55,11 +96,12 @@
 		content: "";
 		height: 2px;
 		border-radius: 8px;
-		background-color: #d75271;
+		background-color: #000000f0;
+		// background-color: #d75271;
 		position: absolute;
 		bottom: 0;
 		transform-origin: 0;
-		left: 0;
+		left: -10%;
 		width: 10%;
 		transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
@@ -76,8 +118,11 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	// background-attachment: ;
+
 	filter: grayscale(1);
+	&:hover {
+		filter: grayscale(0);
+	}
 }
 
 .headerButtonContainer {
@@ -183,12 +228,22 @@
 	}
 }
 
-
-.about{
+.about {
 	.about-banner {
 		background-image: url(/crowd.jpg);
 		background-size: cover;
 		background-position: center;
 		filter: grayscale(1);
+	}
+}
+
+.div_bg {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	// background-attachment: ;
+	// filter: grayscale(1);
+	&-one {
+		background: url("/crowd.jpg");
 	}
 }

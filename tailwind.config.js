@@ -18,7 +18,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        fira: ["Fira Sans", 'sans-serif']
+        fira: ["Fira Sans", 'sans-serif'],
+        'jb-mono': ["jb-mono-reg", 'sans-serif']
       },
       keyframes: {
         "accordion-down": {

@@ -1,6 +1,7 @@
 import "@/styles/globals.scss";
 import { AnimatePresence } from "framer-motion"
 import Link from "next/link";
+import { SmoothScrollProvider } from "@/lib/smooth-scroll-context";
 
 
 export default function App({ Component, pageProps, router })
@@ -16,3 +17,5 @@ export default function App({ Component, pageProps, router })
 
 
 }
+// <SmoothScrollProvider options={{ smooth: true }}>
+// </SmoothScrollProvider>

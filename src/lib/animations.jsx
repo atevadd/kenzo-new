@@ -7,8 +7,9 @@ export default function anim(variants)
             variants
       }
 }
-// --------------ANIMATIONS
 
+
+// --------------ANIMATIONS:
 export const fade = {
       initial: {
             opacity: 0
@@ -33,7 +34,7 @@ export const image_down = {
       enter: {
             opacity: 1,
             height: "140px",
-            opacity: 0.7
+            opacity: 0.9
 
       },
       exit: {
