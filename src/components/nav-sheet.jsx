@@ -5,10 +5,11 @@ import anim, { nav_sheet } from '@/lib/animations';
 import { useRouter } from 'next/router';
 import { navs } from './navbar';
 import Link from 'next/link';
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 
 
-export function NavSheet()
+export function NavSheet({ toggleMenu })
 {
 
       // const pathname = usePathname();
@@ -23,14 +24,19 @@ export function NavSheet()
                   {...anim(nav_sheet())}
                   className={"nav_sheet-menu"}
             >
-                  <div className={"body"}>
+                  <div className={"body relative"}>
+
+                        <div className="toggle absolute top-6 right-6">
+
+                              <button onClick={toggleMenu} className="px-3 p-1 bg-red-400 text-white rounded ml-5 ring-red-400 uppercase font-jb-mono font-medium">
+                                    close
+                              </button>
+                        </div>
 
                         <div onMouseLeave={() => { setSelectedIndicator(router.pathname) }} className={"nav"}>
                               <div className={"header"}>
-                                    <div className="logo">
-                                          <img className="nav-logo" src="/logo2-crop.png" width={180} alt="logo" />
-                                    </div>
 
+                                    explore kenzo
 
                               </div>
                               {
@@ -44,6 +50,25 @@ export function NavSheet()
                                           </Navlink>
                                     })
                               }
+                        </div>
+
+                        <div className="w-full absolute bottom-4 left-0 px-4 flex items-center justify-between">
+                              <img className="nav-logo" src="/logo2-crop.png" width={160} alt="logo" />
+
+                              <div className="socials flex items-center space-x-3">
+                                    <div className="p-1">
+                                          <Facebook />
+                                    </div>
+                                    <div className="p-1">
+                                          <Twitter />
+                                    </div><div className="p-1">
+                                          <Instagram />
+                                    </div><div className="p-1">
+                                          <Youtube />
+                                    </div>
+
+                              </div>
+
                         </div>
 
                   </div>

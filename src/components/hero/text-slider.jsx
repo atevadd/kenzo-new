@@ -14,7 +14,6 @@ import style from './hero.module.scss'
 import { cn } from "@/lib/utils";
 
 {/* __ */ }
-
 export default function TextSlider({ main_text, relative_text })
 {
 
@@ -39,7 +38,7 @@ export default function TextSlider({ main_text, relative_text })
                         onUpdate: e => direction = e.direction * -1
 
                   },
-                  x: "-=600px"
+                  x: "-=60px"
             })
 
             requestAnimationFrame(animation)
@@ -63,7 +62,7 @@ export default function TextSlider({ main_text, relative_text })
             }
             gsap.set(textRef.current, { xPercent: xPercent })
             gsap.set(secondTxtRef.current, { xPercent: xPercent })
-            xPercent += 0.1 * direction
+            xPercent += 0.18 * direction
             requestAnimationFrame(animation)
       }
 

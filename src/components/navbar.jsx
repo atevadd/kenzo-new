@@ -30,6 +30,14 @@ export const navs = [
             label: "Tours",
             href: "/home"
       },
+      {
+            label: "Blog",
+            href: "/home"
+      },
+      {
+            label: "News",
+            href: "/home"
+      },
 ]
 
 
@@ -82,6 +90,12 @@ export default function Navbar({ children })
 
       // }, { scope: menuRef.current })
 
+      function toggleMenu()
+      {
+            setNavActive(!navActive)
+            gsap.to(menuRef.current, { scale: 1, duration: 0.25, ease: "power1.out" })
+      }
+
 
       return (
 
@@ -93,7 +107,7 @@ export default function Navbar({ children })
                   {/* <menuRef variant="nav">Menu</menuRef>*/}
 
 
-                  <nav ref={menuRef} className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 scale-0">
+                  {!navActive && <nav ref={menuRef} className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 scale-0">
 
                         <div className="w-auto bg-neutral-700 rounded flex items-center justify-between p-2 px-4">
                               <motion.div ref={headerRef} className="flex nav-list gap-3">
@@ -110,19 +124,19 @@ export default function Navbar({ children })
                                     }
                               </motion.div>
 
-                              <button onClick={() => setNavActive(!navActive)} className="px-3 p-1 bg-red-400 text-white rounded ml-5 ring-red-400">
+                              <button onClick={() => setNavActive(true)} className="px-3 p-1 bg-red-400 text-white rounded ml-5 ring-red-400">
                                     Menu
                               </button>
 
                         </div>
 
-                  </nav>
+                  </nav>}
 
 
 
                   <AnimatePresence mode="wait">
                         {navActive &&
-                              <NavSheet />}
+                              <NavSheet toggleMenu={toggleMenu} />}
                   </AnimatePresence>
 
             </React.Fragment>

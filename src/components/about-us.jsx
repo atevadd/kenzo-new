@@ -4,6 +4,8 @@ import anim, { image_down } from "@/lib/animations";
 import { motion } from "framer-motion";
 import { Magnetic } from "@/components/magnetic";
 import { Fragment } from "react";
+import StarggerText from "./stargger-text";
+import { scale_in_onview } from "@/lib/animation/gradual-scale-in";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -20,10 +22,11 @@ export default function About()
                               <div className="text-content h-full flex flex-col justify-between  w-[90%]">
                                     {/* _inner text_ */}
                                     <div className="words text-white space-y-2">
-                                          <h1 className="header1 uppercase text-[84px] w-full text-left leading-[90%] ">see their</h1>
-                                          <h1 className="header1 uppercase text-[84px] text-center w-full leading-[90%] italic">words</h1>
+                                          <StarggerText main_text={"see their"} className="header1 uppercase text-[84px] w-full text-left leading-[90%] " />
+                                          <StarggerText main_text={"words"} className="header1 uppercase text-[84px] text-center w-full leading-[90%] italic" />
                                           <div className="w-full text-right  flex justify-end">
-                                                <h1 className="header1 uppercase text-[84px] w-auto text-right leading-[90%] hero_main-text hero_main-text-two">about us</h1>
+                                                <StarggerText main_text={"about us"} className="header1 uppercase text-[84px] w-auto text-right leading-[90%] hero_main-text hero_main-text-two" />
+
                                           </div>
                                     </div>
 
@@ -38,7 +41,12 @@ export default function About()
                               </div>
 
                               {/* _right container_ */}
-                              <div className="w-full h-full flex flex-col gap-6">
+                              <motion.div
+                                    variants={scale_in_onview}
+                                    initial="intital"
+                                    whileInView="enter"
+                                    viewport={{ once: true }}
+                                    className="w-full h-full flex flex-col gap-6">
                                     <div className="image-box w-full h-[500px] bg-neutral-400">
                                           <img src="/tour-1.jpg" alt="" className="full object-cover" />
                                     </div>
@@ -53,7 +61,7 @@ export default function About()
                                                 MAR 22, 2024
                                           </p>
                                     </div>
-                              </div>
+                              </motion.div>
                         </div>
                   </section>
 

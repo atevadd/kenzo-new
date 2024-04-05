@@ -14,6 +14,9 @@ import style from './hero.module.scss'
 import { cn } from "@/lib/utils";
 import TextSlider from "./text-slider";
 import HeroCarousel from "./hero-carousel";
+import DescText from "../desc-text";
+import { slide_in_left } from "@/lib/animation/slide-in-left";
+import StarggerText from "../stargger-text";
 
 {/* __ */ }
 export const navs = [
@@ -43,6 +46,7 @@ export const navs = [
       },
 ]
 
+const dis = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sed excepturi hic quos. Blanditiis numquam delectus, dicta aut ullam velit asperiores, nobis magnam eveniet maiores rerum tenetur officia sit iusto. dicta aut ullam velit asperiores, nobis magnam eveniet maiores rerum tenetur officia sit iusto. dicta aut ullam velit asperiores, nobis magnam eveniet maiores rerum tenetur officia sit iusto."
 
 export default function Hero()
 {
@@ -77,13 +81,11 @@ export default function Hero()
 
                                     <div className="absolute w-full p-10 bottom-6 h-auto flex flex-col">
                                           <div className="hero-text overflow-hidden text-neutral-400">
-                                                <motion.h1 className="header1 uppercase text-[64px] text-right pr-16 hero_main-text italic">
-                                                      We make
-                                                </motion.h1>
+                                                <StarggerText className={"header1 uppercase text-[64px] text-right pr-16 hero_main-text italic "} />
                                           </div>
 
-                                          <div className="hero-box-one flex p-0 gap-6 items-start justify-end h-auto">
-                                                <div className="w-auto h-full flex flex-col space-y-6">
+                                          <div className="hero-box-one flex p-0 gap-6 items-start justify-end h-auto overflow-hidden">
+                                                <motion.div {...anim(slide_in_left)} className="w-auto h-full flex flex-col space-y-6">
                                                       <h1 className="header1 uppercase text-[64px] text-right italic leading-[90%] ">
                                                             memories
                                                       </h1>
@@ -93,7 +95,7 @@ export default function Hero()
                                                       <h1 className="header1 uppercase text-[64px] text-right leading-[90%] italic underline">
                                                             a time
                                                       </h1>
-                                                </div>
+                                                </motion.div>
 
                                                 <div className="hero-sub-image-box w-[40%] h-full">
 
@@ -106,9 +108,7 @@ export default function Hero()
 
                                                       </div>
 
-                                                      <p className="typo-one text-xm mt-2 text-left font-semibold w-full">
-                                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque minus quidem
-                                                      </p>
+                                                      <DescText />
                                                 </div>
                                           </div>
 
@@ -124,7 +124,9 @@ export default function Hero()
                   <section data-scroll-section className="w-full min-h-[400px] gap-8  flex justify-between items-center px-12 bg-neutral-800">
                         <div className="section-text  w-[60%]">
                               <div className="words text-white space-y-2">
-                                    <h1 className="header1 uppercase text-[84px] w-full text-left leading-[90%] ">Best Music </h1>
+                                    {/*<h1 className="header1 uppercase text-[84px] w-full text-left leading-[90%]">Best Music </h1>*/}
+                                    <StarggerText main_text={"Best Music"} className={"header1 uppercase text-[84px] w-full text-left leading-[90%]"} />
+
                                     <div className="w-full text-right  flex justify-end italic">
                                           <h1 className="header1 uppercase text-[84px] w-auto text-right leading-[90%] hero_main-text hero_main-text-two">Promoter</h1>
                                     </div>
@@ -133,12 +135,8 @@ export default function Hero()
                         </div>
 
                         <div className="w-[40%] p-6">
-                              <p className="text-sm font-medium text-neutral-500">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sed excepturi hic quos. Blanditiis numquam
-                                    delectus, dicta aut ullam velit asperiores, nobis magnam eveniet maiores rerum tenetur officia sit iusto.
-                                    dicta aut ullam velit asperiores, nobis magnam eveniet maiores rerum tenetur officia sit iusto.
-                                    dicta aut ullam velit asperiores, nobis magnam eveniet maiores rerum tenetur officia sit iusto.
-                              </p>
+                              <DescText main_text={dis} className={"text-neutral-400"} />
+
 
                               <Link href="/home">
                                     <h1 className="link_text font-semibold underline text-neutral-300 uppercase mt-8">

@@ -10,17 +10,21 @@
       .body{
           box-sizing: border-box;
           height: 100%;
-          padding: 100px;
+          padding: 80px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+        //   background-image: url('/image1.jpeg');
+        //   background-position: left bottom;
+        //   background-repeat: no-repeat;
+        //   background-size: auto;
   
           .nav{
               display: flex;
               flex-direction: column;
-              font-size: 56px;
+              font-size: 36px;
               gap: 12px;
-              margin-top: 80px;
+              margin-top: 20px;
   
               .header{
                   color: rgb(153, 153, 153);

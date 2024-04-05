@@ -2,6 +2,7 @@ export default function anim(variants)
 {
       return {
             initial: "initial",
+            // animate: in_view ? { in_view ? "enter" : "exit"}: "enter",
             animate: "enter",
             exit: "exit",
             variants
@@ -154,5 +155,29 @@ export const text_up_in = {
                   delay: 1.5,
                   ease: [0.76, 0, 0.24, 1]
             }
+      }
+}
+
+
+export const desc_text = (i) =>
+{
+
+      return {
+            initial: {
+                  y: "100%",
+            },
+            enter: {
+                  y: "0%",
+                  transition: {
+                        duration: 0.5,
+                        delay: 0.01 * i
+                  }
+            },
+            exit: {
+                  y: "100%",
+                  transition: {
+                        duration: 0.5,
+                  }
+            },
       }
 }

@@ -3,6 +3,8 @@ import PageLayout from "@/layout/page-layout";
 import anim, { image_down } from "@/lib/animations";
 import { motion } from "framer-motion";
 import { Magnetic } from "@/components/magnetic";
+import StarggerText from "./stargger-text";
+import HorizontalLine from "./full-horizontal-line";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +16,10 @@ export default function Gallery()
             <section className="w-full min-h-screen py-20">
                   <div className=" w-full h-full min-h-screen px-12 p-6 about">
                         <div className="header flex justify-between font-medium  items-center header1 uppercase text-[64px] text-right leading-[90%]">
-                              <h1 className="font-jb-mono">Gallery</h1>
+
+                              {/* _<h1 className="font-jb-mono">Gallery</h1>_ */}
+
+                              <StarggerText main_text={"Gallery"} className="font-jb-mono" />
                               <h1 className=" font-fira italic">Artist</h1>
                         </div>
 
@@ -35,7 +40,7 @@ export default function Gallery()
                                     next
                               </button>
 
-                              <div className="absolute  w-full h-[2px] bg-neutral-400 bottom-0 left-0" />
+                              <HorizontalLine className={"absolute  w-full h-[2px] bg-neutral-400 bottom-0 left-0"} />
                         </div>
 
                         {/* Picture slides_ */}
