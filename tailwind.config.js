@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        accent: "red"
+      },
       fontFamily: {
         fira: ["Fira Sans", 'sans-serif'],
         'jb-mono': ["jb-mono-reg", 'sans-serif']

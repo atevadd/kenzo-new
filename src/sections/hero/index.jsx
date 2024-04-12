@@ -14,9 +14,9 @@ import style from './hero.module.scss'
 import { cn } from "@/lib/utils";
 import TextSlider from "./text-slider";
 import HeroCarousel from "./hero-carousel";
-import DescText from "../desc-text";
+import DescText from "../../components/desc-text";
 import { slide_in_left } from "@/lib/animation/slide-in-left";
-import StarggerText from "../stargger-text";
+import StarggerText from "../../components/stargger-text";
 
 {/* __ */ }
 export const navs = [

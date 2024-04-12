@@ -12,6 +12,8 @@ import { cn } from "@/lib/utils";
 import { Magnetic } from "./magnetic";
 import { NavSheet } from "./nav-sheet";
 import { useRouter } from "next/router";
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+
 
 export const navs = [
       {
@@ -77,6 +79,43 @@ export default function Navbar({ children })
       }, { scope: menuRef.current })
 
 
+
+      // useGSAP(() =>
+      // {
+      //       console.log(document.getElementById("footer"));
+      //       gsap.registerPlugin(ScrollTrigger)
+      //       gsap.to(menuRef.current, {
+      //             scrollTrigger: {
+      //                   trigger: document.getElementById("footer"),
+      //                   start: 0,
+      //                   end: document.getElementById("footer").offsetHeight,
+      //                   onLeave: () =>
+      //                   {
+      //                         gsap.to(menuRef.current, { scale: 1, duration: 0.25, ease: "power1.out" })
+      //                         // gsap.to(headerRef.current, { y: -80, duration: 0.25, ease: "power1.out" })
+      //                         console.log("ileftthe footer");
+
+      //                   },
+      //                   onEnter: () =>
+      //                   {
+      //                         gsap.to(menuRef.current, { scale: 0, duration: 0.25, ease: "power1.out" })
+      //                         // gsap.to(headerRef.current, { y: -80, duration: 0.25, ease: "power1.out" })
+      //                         console.log("i enter footer");
+
+
+      //                   },
+      //                   // onEnterBack: () =>
+      //                   // {
+      //                   //       gsap.to(menuRef.current, { scale: 0, duration: 0.25, ease: "power1.out" })
+      //                   //       // gsap.to(headerRef.current, { y: 0, duration: 0.25, ease: "power1.out" },
+      //                   //       //       setNavActive(false))
+      //                   // }
+      //             }
+      //       })
+
+      // }, { scope: menuRef.current })
+
+
       // useGSAP(() =>
       // {
       //       console.log(router.pathname, "the curent path name");
@@ -107,15 +146,15 @@ export default function Navbar({ children })
                   {/* <menuRef variant="nav">Menu</menuRef>*/}
 
 
-                  {!navActive && <nav ref={menuRef} className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 scale-0">
+                  {!navActive && <nav ref={menuRef} className="fixed z-50 scale-0 -translate-x-1/2 bottom-12 left-1/2">
 
-                        <div className="w-auto bg-neutral-700 rounded flex items-center justify-between p-2 px-4">
-                              <motion.div ref={headerRef} className="flex nav-list gap-3">
+                        <div className="flex items-center justify-between w-auto p-2 px-4 rounded bg-neutral-700">
+                              <motion.div ref={headerRef} className="flex gap-3 nav-list">
                                     {
                                           navs.map((item, key) => (
                                                 <Link key={key} href={item.href}>
                                                       <Magnetic>
-                                                            <div className="nav-item text-sm text-white font-mono px-0 p-2 overflow-hidden">
+                                                            <div className="p-2 px-0 overflow-hidden font-mono text-sm text-white nav-item">
                                                                   <motion.p {...anim(text_in())}>{item.label}</motion.p>
                                                             </div>
                                                       </Magnetic>
@@ -124,7 +163,7 @@ export default function Navbar({ children })
                                     }
                               </motion.div>
 
-                              <button onClick={() => setNavActive(true)} className="px-3 p-1 bg-red-400 text-white rounded ml-5 ring-red-400">
+                              <button onClick={() => setNavActive(true)} className="p-1 px-3 ml-5 text-white bg-red-400 rounded ring-red-400">
                                     Menu
                               </button>
 
@@ -155,12 +194,12 @@ export default function Navbar({ children })
 // </RoundBtn>
 
 
-// <motion.div ref={headerRef} className="flex nav-list gap-6">
+// <motion.div ref={headerRef} className="flex gap-6 nav-list">
 // {
 //       navs.map((item, key) => (
 //             <Link key={key} href={item.href}>
 //                   <Magnetic>
-//                         <div className="nav-item text-sm text-white font-mono px-0 p-2 overflow-hidden">
+//                         <div className="p-2 px-0 overflow-hidden font-mono text-sm text-white nav-item">
 //                               <motion.p {...anim(text_in())}>{item.label}</motion.p>
 //                         </div>
 //                   </Magnetic>

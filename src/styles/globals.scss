@@ -4,21 +4,20 @@
 @tailwind utilities;
 
 @import "../../public/font/fonts";
-@import "nav-sheet.scss";
-@import "services";
-@import "hero";
+@import "./components/nav-sheet";
+@import "./sections/services";
+@import "./sections/hero";
 
 body {
-	// font-family: 'jb-mono';
 	transition: all 0.4s ease-in;
-overflow-x: hidden;
-@apply text-neutral-600;
-scroll-snap-type: y mandatory;
+	overflow-x: hidden;
+	@apply text-neutral-600;
+	scroll-snap-type: y mandatory;
 }
 
 section {
 	scroll-snap-align: start;
-    }
+}
 
 .br {
 	border: 1px solid red;
@@ -41,7 +40,7 @@ section {
 // 	filter: grayscale(1);
 // }
 
-.cursor{
+.cursor {
 	background-color: transparent;
 	mix-blend-mode: darken;
 	transform-origin: 0;

@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Navbar from "@/components/navbar"
 import anim, { slides, fade, paspective } from "@/lib/animations"
 import { useRouter } from "next/router";
-import Footer from "@/components/footer";
+import Footer from "@/sections/footer";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";

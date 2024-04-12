@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { Magnetic } from "@/components/magnetic";
 import About from "@/components/about-us";
 import Gallery from "@/components/gallery";
-import Hero from "@/components/hero";
-import Services from "@/components/services";
+import Hero from "@/sections/hero";
+import Services from "@/sections/services";
 import Contact from "@/components/contact";
 import { useEffect } from "react";
 
