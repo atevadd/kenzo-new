@@ -3,8 +3,8 @@ import PageLayout from "@/layout/page-layout";
 import anim, { image_down } from "@/lib/animations";
 import { motion } from "framer-motion";
 import { Magnetic } from "@/components/magnetic";
-import StarggerText from "./stargger-text";
-import HorizontalLine from "./full-horizontal-line";
+import StarggerText from "../components/stargger-text";
+import HorizontalLine from "../components/full-horizontal-line";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -14,29 +14,29 @@ export default function Gallery()
 {
       return (
             <section className="w-full min-h-screen py-20">
-                  <div className=" w-full h-full min-h-screen px-12 p-6 about">
+                  <div className="w-full h-full min-h-screen p-6 px-12  about">
                         <div className="header flex justify-between font-medium  items-center header1 uppercase text-[64px] text-right leading-[90%]">
 
                               {/* _<h1 className="font-jb-mono">Gallery</h1>_ */}
 
                               <StarggerText main_text={"Gallery"} className="font-jb-mono" />
-                              <h1 className=" font-fira italic">Artist</h1>
+                              <h1 className="italic  font-fira">Artist</h1>
                         </div>
 
 
                         {/* _tool bar_ */}
-                        <div className="w-full py-4 flex justify-between items-center relative">
-                              <button className="font-jb font-semibold uppercase">
+                        <div className="relative flex items-center justify-between w-full py-4">
+                              <button className="font-semibold uppercase font-jb">
                                     prev
                               </button>
 
-                              <div className="counts p-1">
-                                    <h1 className="uppercase font-mono text-neutral-400 italic">
+                              <div className="p-1 counts">
+                                    <h1 className="font-mono italic uppercase text-neutral-400">
                                           All(89)
                                     </h1>
                               </div>
 
-                              <button className="font-jb font-semibold uppercase">
+                              <button className="font-semibold uppercase font-jb">
                                     next
                               </button>
 
@@ -50,13 +50,13 @@ export default function Gallery()
                                           style={{
                                                 backgroundImage: "url('/image3.jpeg')"
                                           }}
-                                          className="image_box w-full h-full bg-neutral-500">
+                                          className="w-full h-full image_box bg-neutral-500">
 
                                     </div>
 
-                                    <div className="w-full py-2 flex justify-between mt-3">
-                                          <div className="text_box h-full flex flex-col text-neutral-700">
-                                                <h2 className="header2 text-xl font-semibold uppercase font-fira ">Feel the kenzo moment and grand launching.</h2>
+                                    <div className="flex justify-between w-full py-2 mt-3">
+                                          <div className="flex flex-col h-full text_box text-neutral-700">
+                                                <h2 className="text-xl font-semibold uppercase header2 font-fira ">Feel the kenzo moment and grand launching.</h2>
                                                 <p className="header2 font-fira">Limited time offer to purchase this ticket</p>
                                           </div>
 
@@ -72,14 +72,14 @@ export default function Gallery()
                                           style={{
                                                 backgroundImage: "url('/image5.jpeg')"
                                           }}
-                                          className="image_box w-full h-full bg-neutral-500">
+                                          className="w-full h-full image_box bg-neutral-500">
 
                                     </div>
 
 
-                                    <div className="w-full py-2 flex justify-between mt-3">
-                                          <div className="text_box h-full flex flex-col text-neutral-700">
-                                                <h2 className="header2 text-xl font-semibold uppercase font-fira ">Feel the kenzo moment and grand launching.</h2>
+                                    <div className="flex justify-between w-full py-2 mt-3">
+                                          <div className="flex flex-col h-full text_box text-neutral-700">
+                                                <h2 className="text-xl font-semibold uppercase header2 font-fira ">Feel the kenzo moment and grand launching.</h2>
                                                 <p className="header2 font-fira">Limited time offer to purchase this ticket</p>
                                           </div>
 

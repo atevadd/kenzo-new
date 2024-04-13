@@ -4,17 +4,11 @@ import anim, { image_down, text_up_in } from "@/lib/animations";
 import { motion } from 'framer-motion';
 import { Magnetic } from "@/components/magnetic";
 import About from "@/components/about-us";
-import Gallery from "@/components/gallery";
+import Gallery from "@/sections/gallery";
 import Hero from "@/sections/hero";
 import Services from "@/sections/services";
-import Contact from "@/components/contact";
+import Contact from "@/sections/contact-section";
 import { useEffect } from "react";
-
-
-// const inter = Inter({ subsets: ["latin"] });
-{/*<Tour />*/ }
-
-
 
 function Home()
 {
@@ -28,11 +22,6 @@ function Home()
             </PageLayout>
       );
 }
-
-// <h1 className="header1 uppercase text-[24px] italic leading-[90%] ">
-//       some more beautifull
-// </h1>
-
 
 
 const HomePage = () =>

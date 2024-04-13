@@ -1,30 +1,28 @@
 import Image from "next/image";
 import PageLayout from "@/layout/page-layout";
-
+import { motion } from "framer-motion";
+import Link from "next/link";
+import SectionTitle from "@/components/sectiion-title";
+import ContactSection from "@/sections/contact-section";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-export default function Home()
+export default function Contact()
 {
       return (
             <PageLayout>
-                  <main className={` min-h-screen`}>
-                        <div className="w-full p-11">
-                              <h1 className="font-semibold capitalize">contact</h1>
-
-                              <div className="mt-6 flex justify-between items-start text-2xl">
-                                    <p className="text-left">
-                                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio quod, officia a enim ut, iusto,
-                                          repellendus sed fugiat eius qui id animi cupiditate incidunt. Eaque excepturi voluptate velit quae cumque!
-                                    </p>
-
-                                    <p className="text-left">
-                                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio quod, officia a enim ut, iusto,
-                                          repellendus sed fugiat eius qui id animi cupiditate incidunt. Eaque excepturi voluptate velit quae cumque!
-                                    </p>
-                              </div>
-                        </div>
-                  </main>
+                  <ContactSection line={true} comp={<ContactBanner />} />
             </PageLayout>
+      );
+}
+
+// <SectionTitle titleLable={"Contact"} linkUrl={"/"} linkLabel={"Tours"} />
+
+function ContactBanner()
+{
+      return (
+            <div className="w-full py-3 my-6">
+                  <div className="w-full mt-6 h-[400px]  contact-banner"></div>
+            </div>
       );
 }

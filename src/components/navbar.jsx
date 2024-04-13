@@ -34,11 +34,11 @@ export const navs = [
       },
       {
             label: "Blog",
-            href: "/home"
+            href: "/blog"
       },
       {
             label: "News",
-            href: "/home"
+            href: "/news"
       },
 ]
 

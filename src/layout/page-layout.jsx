@@ -38,10 +38,10 @@ export default function PageLayout({ children })
       return (
 
             <main className={`main-layout min-h-screen bg-black`}>
-                  <motion.div  {...anim(slides)} className="w-screen h-screen top-0 left-0 fixed  bg-white slide z-10" />
-                  <motion.div  {...anim(paspective)} className="page bg-white">
-                        <motion.div  {...anim(fade)} className="slide page overflow-x-hidden ">
-                              <div ref={cursorRef} className="cursor fixed w-8 h-8 border-4 rounded-full border-neutral-800"></div>
+                  <motion.div  {...anim(slides)} className="fixed top-0 left-0 z-10 w-screen h-screen bg-white slide" />
+                  <motion.div  {...anim(paspective)} className="bg-white page">
+                        <motion.div  {...anim(fade)} className="overflow-x-hidden slide page ">
+                              <div ref={cursorRef} className="fixed w-12 h-12 border-2 rounded-full cursor border-neutral-200"></div>
                               <Navbar />
                               {children}
                               <Footer />

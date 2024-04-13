@@ -18,11 +18,15 @@ module.exports = {
     },
     extend: {
       colors: {
-        accent: "red"
+        accent: "#D75271",
+        "accent-purple": "#EE66DD5b",
+        "secondary": "#E45826"
       },
       fontFamily: {
         fira: ["Fira Sans", 'sans-serif'],
-        'jb-mono': ["jb-mono-reg", 'sans-serif']
+        'jb-mono': ["jb-mono-reg", 'sans-serif'],
+        plus: ["Plus Jakarta Sans", "sans-serif"],
+
       },
       keyframes: {
         "accordion-down": {
