@@ -55,19 +55,16 @@ section {
 	background-size: cover;
 	transition: all 0.4s ease-in;
 	transform: scale(1);
-
-	// background-attachment: ;
-	filter: grayscale(1);
+	
 	&:hover {
-		filter: grayscale(0);
 		transform: scale(1.04);
-		transition: all 0.4s ease-in;
+	
 	}
 }
 
-.nav-logo {
-	//   filter: grayscale(1)
-}
+// .nav-logo {
+// 	//   filter: grayscale(1)
+// }
 
 .hero_main-text {
 	position: relative;

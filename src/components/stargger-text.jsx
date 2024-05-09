@@ -14,37 +14,39 @@ import { cn } from "@/lib/utils";
 import { text_down_up } from "@/lib/animation/text-down-up";
 import { text_fade_in_stg } from "@/lib/animation/text-stagger-in";
 
-{/* __ */ }
-export default function StarggerText({ main_text, animationType = 'fade', className })
 {
-
-      const textRef = useRef(null)
-      const TextInView = useInView(textRef)
-
-      let phrase = main_text || "we make"
-
-      return (
-            <h1 ref={textRef} className={cn(className, "")}>
-                  {
-                        phrase.split('').map((word, index) => (
-                              <span className="overflow-hidden relative inline-flex mr-1">
-                                    <motion.span variants={text_fade_in_stg} custom={index} initial="initial" animate={TextInView ? "enter" : "exit"} className="">
-                                          {word === " " ? "_" : word}
-                                    </motion.span>
-                              </span>
-                        ))
-                  }
-
-            </h1>
-
-
-      );
+  /* __ */
 }
+export default function StarggerText({
+  main_text,
+  animationType = "fade",
+  className,
+}) {
+  const textRef = useRef(null);
+  const TextInView = useInView(textRef);
 
+  let phrase = main_text || "we make";
+
+  return (
+    <h1 ref={textRef} className={cn(className, "")}>
+      {phrase.split("").map((word, index) => (
+        <span className="overflow-hidden relative inline-flex mr-1">
+          <motion.span
+            variants={text_fade_in_stg}
+            custom={index}
+            initial="initial"
+            animate={TextInView ? "enter" : "exit"}
+            className=""
+          >
+            {word === " " ? "_" : word}
+          </motion.span>
+        </span>
+      ))}
+    </h1>
+  );
+}
 
 // <img src="/image1.jpeg" alt="" className="w-full h-[500px] object-cover " />
 // <h1 className="header1 uppercase text-[24px] italic leading-[90%] ">
 //       some more beautifull
 // </h1>
-
-
