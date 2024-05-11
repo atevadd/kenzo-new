@@ -30,7 +30,7 @@ export default function TextSlider({ main_text, relative_text }) {
         trigger: document.documentElement,
         start: 200,
         end: window.innerHeight * 2,
-        scrub: 0.25,
+        scrub: 1,
         onUpdate: (e) => (direction = e.direction * -1),
       },
       x: "-=60px",
